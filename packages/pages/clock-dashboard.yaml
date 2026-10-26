@@ -95,7 +95,7 @@ lvgl:
 
     # dimmed small text for hi/low
     - id: style_dim_text
-      text_font: spleen_8
+      text_font: scp_8
       text_color: 0xA0A0A0
 
   pages:
