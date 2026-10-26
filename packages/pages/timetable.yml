@@ -128,6 +128,39 @@ script:
             }
           }
 
+time:
+  - id: !extend ha_time
+
+    # when we first get a valid clock, populate both labels
+    on_time_sync:
+      then:
+        - lvgl.label.update:
+            id: lbl_time
+            text:
+              time_format: "%I:%M %p"
+              time: ha_time
+        - lvgl.label.update:
+            id: lbl_date
+            text:
+              time_format: "%a, %b %d"
+              time: ha_time
+
+    # update both every minute on the minute
+    on_time:
+      - seconds: 0
+        minutes: /1
+        then:
+          - lvgl.label.update:
+              id: lbl_time
+              text:
+                time_format: "%I:%M %p"
+                time: ha_time
+          - lvgl.label.update:
+              id: lbl_date
+              text:
+                time_format: "%a, %b %d"
+                time: ha_time
+
 lvgl_page_manager:
   pages:
     - page: page_timetable
