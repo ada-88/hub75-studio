@@ -4,15 +4,15 @@
 # Share styles used between various packages
 
 font:
-  - file: "https://github.com/adobe-fonts/source-code-pro/blob/release/TTF/SourceCodePro-Regular.ttf"
+  - file: "https://github.com/adobe-fonts/source-code-pro/raw/refs/heads/release/TTF/SourceCodePro-Regular.ttf"
     id: scp_8
     size: 8
 
-  - file: "https://github.com/adobe-fonts/source-code-pro/blob/release/TTF/SourceCodePro-Regular.ttf"
+  - file: "https://github.com/adobe-fonts/source-code-pro/raw/refs/heads/release/TTF/SourceCodePro-Regular.ttf"
     id: scp_12
     size: 12
 
-  - file: "https://github.com/adobe-fonts/source-code-pro/blob/release/TTF/SourceCodePro-Regular.ttf"
+  - file: "https://github.com/adobe-fonts/source-code-pro/raw/refs/heads/release/TTF/SourceCodePro-Regular.ttf"
     id: scp_16
     size: 16
 
