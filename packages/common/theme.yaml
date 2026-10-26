@@ -4,16 +4,16 @@
 # Share styles used between various packages
 
 font:
-  - file: "https://github.com/fcambus/spleen/raw/refs/tags/2.1.0/spleen-5x8.bdf"
-    id: spleen_8
+  - file: "https://github.com/adobe-fonts/source-code-pro/blob/release/TTF/SourceCodePro-Regular.ttf"
+    id: scp_8
     size: 8
 
-  - file: "https://github.com/fcambus/spleen/raw/refs/tags/2.1.0/spleen-6x12.bdf"
-    id: spleen_12
+  - file: "https://github.com/adobe-fonts/source-code-pro/blob/release/TTF/SourceCodePro-Regular.ttf"
+    id: scp_12
     size: 12
 
-  - file: "https://github.com/fcambus/spleen/raw/refs/tags/2.1.0/spleen-8x16.bdf"
-    id: spleen_16
+  - file: "https://github.com/adobe-fonts/source-code-pro/blob/release/TTF/SourceCodePro-Regular.ttf"
+    id: scp_16
     size: 16
 
 lvgl:
@@ -22,13 +22,13 @@ lvgl:
       bg_color: black
       text_color: white
     - id: st_spleen8
-      text_font: spleen_8
+      text_font: scp_8
       text_color: white
     - id: st_spleen12
-      text_font: spleen_12
+      text_font: scp_12
       text_color: white
     - id: st_spleen16
-      text_font: spleen_16
+      text_font: scp_16
       text_color: white
 
   # Screen (display) background behind everything
@@ -36,7 +36,7 @@ lvgl:
     bg_color: black
 
   # Make Spleen 8 the default font everywhere
-  default_font: spleen_8
+  default_font: scp_8
 
   # Global defaults for *all* widgets
   bg_color: black
