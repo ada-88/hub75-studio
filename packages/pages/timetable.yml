@@ -72,9 +72,6 @@ sensor:
     on_value:
       then:
         - lvgl.label.update:
-            id: lbl_temp_smichov
-            text: !lambda 'return str_sprintf("%.1fC", x);'
-        - lvgl.label.update:
             id: lbl_temp_plzenka
             text: !lambda 'return str_sprintf("%.1fC", x);'
 
@@ -85,9 +82,6 @@ sensor:
     attribute: "temperature"
     on_value:
       then:
-        - lvgl.label.update:
-            id: lbl_weather_smichov
-            text: !lambda 'return str_sprintf("%.1fC", x);'
         - lvgl.label.update:
             id: lbl_weather_plzenka
             text: !lambda 'return str_sprintf("%.1fC", x);'
