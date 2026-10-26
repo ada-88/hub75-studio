@@ -235,7 +235,7 @@ display:
     d_pin: GPIO42
     clock_phase: false
     latch_blanking: 1
-    clock_speed: 20MHz
+    clock_speed: 16MHz
     bit_depth: 8
     double_buffer: false
     auto_clear_enabled: false
