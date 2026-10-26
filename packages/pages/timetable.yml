@@ -130,12 +130,12 @@ script:
 
 lvgl_page_manager:
   pages:
-    - page: page_timetable${uid}
+    - page: page_timetable
       friendly_name: "${page_friendly_name}"
 
 lvgl:
   pages:
-    - id: page_timetable${uid}
+    - id: page_timetable
       bg_color: 0x000000
       widgets:
         - label:
