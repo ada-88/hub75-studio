@@ -130,11 +130,6 @@ script:
 
 
 lvgl:
-  byte_order: little_endian
-  displays:
-    - matrix
-  buffer_size: 100%
-
   pages:
     - id: screen_plzenka
       bg_color: 0x000000
