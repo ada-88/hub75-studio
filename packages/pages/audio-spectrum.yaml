@@ -34,7 +34,7 @@ external_components:
 # - sample_rate: 16000 (must match EqFftRenderer::setup fs)
 # - With fs=16 kHz and fmax_frac≈0.46–0.47, bars top out near 7.5–8 kHz
 microphone:
-  - id: !extend m1_mic
+  - id: !extend ws_mic
     on_data:
       then:
         - lambda: |-
