@@ -1,3 +1,14 @@
+font:
+  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/refs/heads/master/fonts/materialdesignicons-webfont.ttf"
+    id: mdi_8
+    size: 8
+    bpp: 4
+    glyphs: [
+      "\U000F0BF0", # mdi-b-circle
+      "\U000F0BED", # mdi-a-circle
+      ]
+
+
 text_sensor:
   # --- Plzeňka ---
   - platform: homeassistant
@@ -174,7 +185,7 @@ lvgl:
             id: lbl_title_plzenka
             x: 1
             y: 0
-            text: "Plzenka"
+            text: "Plzenka \"U000F0335\" \"U000F0336\""
             text_color: 0xFFFFFF
         - line:
             points: [ [0, 10], [192, 10] ]
