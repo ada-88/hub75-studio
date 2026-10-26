@@ -6,7 +6,7 @@
 font:
   - file: "https://github.com/adobe-fonts/source-code-pro/raw/refs/heads/release/TTF/SourceCodePro-Regular.ttf"
     id: scp_8
-    size: 8
+    size: 10
 
   - file: "https://github.com/adobe-fonts/source-code-pro/raw/refs/heads/release/TTF/SourceCodePro-Regular.ttf"
     id: scp_12
