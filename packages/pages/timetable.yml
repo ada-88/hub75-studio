@@ -73,7 +73,7 @@ sensor:
       then:
         - lvgl.label.update:
             id: lbl_temp_plzenka
-            text: !lambda 'return str_sprintf("%.1f℃", x);'
+            text: !lambda 'return str_sprintf("%.1f C", x);'
 
 
   - platform: homeassistant
@@ -84,7 +84,7 @@ sensor:
       then:
         - lvgl.label.update:
             id: lbl_weather_plzenka
-            text: !lambda 'return str_sprintf("%.1f℃", x);'
+            text: !lambda 'return str_sprintf("%.1f C", x);'
 
 
 script:
