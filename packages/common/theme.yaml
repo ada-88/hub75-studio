@@ -12,11 +12,11 @@ font:
 
   - file: "https://github.com/trip5/Matrix-Fonts/raw/refs/heads/main/8-series/MatrixLight8X.ttf"
     id: scp_12
-    size: 12
+    size: 8
 
   - file: "https://github.com/trip5/Matrix-Fonts/raw/refs/heads/main/8-series/MatrixLight8X.ttf"
     id: scp_16
-    size: 16
+    size: 8
 
 lvgl:
   style_definitions:
