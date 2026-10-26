@@ -22,17 +22,6 @@ time:
                 char buf[16];
                 id(ha_time).now().strftime(buf, sizeof(buf), "%H:%M:%S");
                 return std::string(buf);
-
-font:
-  - file: fonts/Eight-Bit-Dragon.ttf
-    id: chunky
-    size: 10
-    glyphs: |-
-      ! "#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZŮŇČĎĚŘŠŤŽÁÉÍÓÚÝ[\]^_`abcdefghijklmnopqrstuvwxyzůňčďěřšťžáéíóúý°
-  - file: fonts/Eight-Bit-Dragon.ttf
-    id: chunky_large
-    size: 16
-    glyphs: "0123456789: APM"
   
   # --- Plzeňka ---
   - platform: homeassistant
@@ -186,27 +175,26 @@ lvgl:
             y: 0
             text: "Plzenka"
             text_color: 0xFFFFFF
-            text_font: chunky
         - line:
             points: [ [0, 10], [192, 10] ]
             line_color: 0xFFFFFF
             line_width: 1
 
-        - label: { id: plz_r0, x: 1, y: 12, text: "", text_color: 0x00DCFF, text_font: chunky }
-        - label: { id: plz_h0, x: 22, y: 12, text: "", text_color: 0xFFDC00, text_font: chunky }
-        - label: { id: plz_m0, x: 168, y: 12, text: "", text_color: 0x00FF32, text_font: chunky }
+        - label: { id: plz_r0, x: 1, y: 12, text: "", text_color: 0x00DCFF }
+        - label: { id: plz_h0, x: 22, y: 12, text: "", text_color: 0xFFDC00 }
+        - label: { id: plz_m0, x: 168, y: 12, text: "", text_color: 0x00FF32 }
 
-        - label: { id: plz_r1, x: 1, y: 22, text: "", text_color: 0x00DCFF, text_font: chunky }
-        - label: { id: plz_h1, x: 22, y: 22, text: "", text_color: 0xFFDC00, text_font: chunky }
-        - label: { id: plz_m1, x: 168, y: 22, text: "", text_color: 0x00FF32, text_font: chunky }
+        - label: { id: plz_r1, x: 1, y: 22, text: "", text_color: 0x00DCFF }
+        - label: { id: plz_h1, x: 22, y: 22, text: "", text_color: 0xFFDC00 }
+        - label: { id: plz_m1, x: 168, y: 22, text: "", text_color: 0x00FF32 }
 
-        - label: { id: plz_r2, x: 1, y: 32, text: "", text_color: 0x00DCFF, text_font: chunky }
-        - label: { id: plz_h2, x: 22, y: 32, text: "", text_color: 0xFFDC00, text_font: chunky }
-        - label: { id: plz_m2, x: 168, y: 32, text: "", text_color: 0x00FF32, text_font: chunky }
+        - label: { id: plz_r2, x: 1, y: 32, text: "", text_color: 0x00DCFF }
+        - label: { id: plz_h2, x: 22, y: 32, text: "", text_color: 0xFFDC00 }
+        - label: { id: plz_m2, x: 168, y: 32, text: "", text_color: 0x00FF32 }
 
-        - label: { id: plz_r3, x: 1, y: 42, text: "", text_color: 0x00DCFF, text_font: chunky }
-        - label: { id: plz_h3, x: 22, y: 42, text: "", text_color: 0xFFDC00, text_font: chunky }
-        - label: { id: plz_m3, x: 168, y: 42, text: "", text_color: 0x00FF32, text_font: chunky }
+        - label: { id: plz_r3, x: 1, y: 42, text: "", text_color: 0x00DCFF }
+        - label: { id: plz_h3, x: 22, y: 42, text: "", text_color: 0xFFDC00 }
+        - label: { id: plz_m3, x: 168, y: 42, text: "", text_color: 0x00FF32 }
 
         - line:
             points: [ [0, 53], [192, 53] ]
@@ -217,6 +205,6 @@ lvgl:
             line_color: 0xFFFFFF
             line_width: 1
 
-        - label: { id: lbl_time_plzenka, x: 1, y: 55, text: "", text_color: 0xFFFFFF, text_font: chunky }
-        - label: { id: lbl_weather_plzenka, x: 122, y: 55, text: "--", text_color: 0xFFFFFF, text_font: chunky }
-        - label: { id: lbl_temp_plzenka, x: 158, y: 55, text: "--", text_color: 0xFFFFFF, text_font: chunky }
+        - label: { id: lbl_time_plzenka, x: 1, y: 55, text: "", text_color: 0xFFFFFF }
+        - label: { id: lbl_weather_plzenka, x: 122, y: 55, text: "--", text_color: 0xFFFFFF }
+        - label: { id: lbl_temp_plzenka, x: 158, y: 55, text: "--", text_color: 0xFFFFFF }
