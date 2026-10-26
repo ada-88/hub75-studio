@@ -1,28 +1,3 @@
-time:
-  - platform: homeassistant
-    id: ha_time
-    on_time:
-      - seconds: '*'
-        then:
-          - lvgl.label.update:
-              id: lbl_time_smichov
-              text: !lambda |-
-                char buf[32];
-                id(ha_time).now().strftime(buf, sizeof(buf), "%a %d.%m.%Y %H:%M");
-                return std::string(buf);
-          - lvgl.label.update:
-              id: lbl_time_plzenka
-              text: !lambda |-
-                char buf[32];
-                id(ha_time).now().strftime(buf, sizeof(buf), "%a %d.%m.%Y %H:%M");
-                return std::string(buf);
-          - lvgl.label.update:
-              id: lbl_large_clock
-              text: !lambda |-
-                char buf[16];
-                id(ha_time).now().strftime(buf, sizeof(buf), "%H:%M:%S");
-                return std::string(buf);
-
 text_sensor:
   # --- Plzeňka ---
   - platform: homeassistant
