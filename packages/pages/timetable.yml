@@ -207,6 +207,6 @@ lvgl:
             line_width: 1
 
         - label: { id: lbl_time_1, x: 1, y: 56, text: "", text_color: 0xFFFFFF }
-        - label: { id: lbl_date_1, x: 40, y: 56, text: "", text_color: 0xFFFFFF }
-        - label: { id: lbl_weather_plzenka, x: 122, y: 56, text: "--", text_color: 0xFFFFFF }
-        - label: { id: lbl_temp_plzenka, x: 158, y: 56, text: "--", text_color: 0xFFFFFF }
+        - label: { id: lbl_date_1, x: 48, y: 56, text: "", text_color: 0xFFFFFF }
+        - label: { id: lbl_weather_plzenka, x: 128, y: 56, text: "--", text_color: 0xFFFFFF }
+        - label: { id: lbl_temp_plzenka, x: 162, y: 56, text: "--", text_color: 0xFFFFFF }
