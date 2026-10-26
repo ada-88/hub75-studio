@@ -73,7 +73,7 @@ sensor:
       then:
         - lvgl.label.update:
             id: lbl_temp_plzenka
-            text: !lambda 'return str_sprintf("%.1fC", x);'
+            text: !lambda 'return str_sprintf("%.1f℃", x);'
 
 
   - platform: homeassistant
@@ -84,7 +84,7 @@ sensor:
       then:
         - lvgl.label.update:
             id: lbl_weather_plzenka
-            text: !lambda 'return str_sprintf("%.1fC", x);'
+            text: !lambda 'return str_sprintf("%.1f℃", x);'
 
 
 script:
@@ -137,7 +137,7 @@ time:
         - lvgl.label.update:
             id: lbl_time_1
             text:
-              time_format: "%I:%M %p"
+              time_format: "%H:%M:%S"
               time: ha_time
         - lvgl.label.update:
             id: lbl_date_1
@@ -148,17 +148,16 @@ time:
     # update both every minute on the minute
     on_time:
       - seconds: 0
-        minutes: /1
         then:
           - lvgl.label.update:
               id: lbl_time_1
               text:
-                time_format: "%I:%M %p"
+                time_format: "%H:%M:%S"
                 time: ha_time
           - lvgl.label.update:
               id: lbl_date_1
               text:
-                time_format: "%a, %b %d"
+                time_format: "%a %d.%m.%Y"
                 time: ha_time
 
 lvgl_page_manager:
@@ -208,6 +207,6 @@ lvgl:
             line_width: 1
 
         - label: { id: lbl_time_1, x: 1, y: 55, text: "", text_color: 0xFFFFFF }
-        - label: { id: lbl_date_1, x: 50, y: 55, text: "", text_color: 0xFFFFFF }
+        - label: { id: lbl_date_1, x: 40, y: 55, text: "", text_color: 0xFFFFFF }
         - label: { id: lbl_weather_plzenka, x: 122, y: 55, text: "--", text_color: 0xFFFFFF }
         - label: { id: lbl_temp_plzenka, x: 158, y: 55, text: "--", text_color: 0xFFFFFF }
