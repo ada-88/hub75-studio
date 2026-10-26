@@ -4,17 +4,17 @@
 # Share styles used between various packages
 
 font:
-  - file: "https://github.com/trip5/Matrix-Fonts/raw/refs/heads/main/8-series/MatrixLight8X.ttf"
+  - file: "https://github.com/trip5/Matrix-Fonts/raw/refs/heads/main/8-series/MatrixLight8.ttf.ttf"
     id: scp_8
     glyphs: |-
       ! "#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZŮŇČĎĚŘŠŤŽÁÉÍÓÚÝ[\]^_`abcdefghijklmnopqrstuvwxyzůňčďěřšťžáéíóúý°
     size: 8
 
-  - file: "https://github.com/trip5/Matrix-Fonts/raw/refs/heads/main/8-series/MatrixLight8X.ttf"
+  - file: "https://github.com/trip5/Matrix-Fonts/raw/refs/heads/main/8-series/MatrixLight8.ttf.ttf"
     id: scp_12
     size: 8
 
-  - file: "https://github.com/trip5/Matrix-Fonts/raw/refs/heads/main/8-series/MatrixLight8X.ttf"
+  - file: "https://github.com/trip5/Matrix-Fonts/raw/refs/heads/main/8-series/MatrixLight8.ttf.ttf"
     id: scp_16
     size: 8
 
