@@ -151,12 +151,12 @@ time:
         minutes: /1
         then:
           - lvgl.label.update:
-              id: lbl_time
+              id: lbl_time_1
               text:
                 time_format: "%I:%M %p"
                 time: ha_time
           - lvgl.label.update:
-              id: lbl_date
+              id: lbl_date_1
               text:
                 time_format: "%a, %b %d"
                 time: ha_time
