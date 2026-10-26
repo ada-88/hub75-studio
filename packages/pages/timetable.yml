@@ -132,7 +132,7 @@ script:
 lvgl:
   byte_order: little_endian
   displays:
-    - matrix_display
+    - matrix
   buffer_size: 100%
 
   pages:
