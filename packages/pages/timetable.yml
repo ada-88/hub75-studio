@@ -17,7 +17,6 @@ text_sensor:
       then:
         - lvgl.label.update:
             id: lbl_title_plzenka
-            font: 
             text: !lambda 'return x;'
 
   - platform: homeassistant
