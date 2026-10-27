@@ -4,8 +4,8 @@ font:
     size: 11
     bpp: 1
     glyphs: [
-      "\U000F0BED", # mdi-lightbulb
-      "\U000F0BF0", # mdi-lightbulb-outline
+      "\U000F0BED", # mdi-circle-a
+      "\U000F0BF0", # mdi-circle-b
       ]
 
 text_sensor:
@@ -187,12 +187,21 @@ lvgl:
             text: ""
             text_color: 0xFFFFFF
         - label:
-            id: lbl_title_tram_stop
-            x: 50
+            id: lbl_title_tram_stop_a
+            x: 60
             y: 0
             text: "\U000F0BF0"
             text_font: mdi_8
             text_color: 0xFFFFFF
+        - label:
+            id: lbl_title_tram_stop_b
+            x: 50
+            y: 0
+            text: "\U000F0BED"
+            text_font: mdi_8
+            text_color: 0xFFFFFF
+
+            
         - line:
             points: [ [0, 10], [192, 10] ]
             line_color: 0xFFFFFF
@@ -224,6 +233,6 @@ lvgl:
             line_width: 1
 
         - label: { id: lbl_time_1, x: 1, y: 56, text: "", text_color: 0xFFFFFF }
-        - label: { id: lbl_date_1, x: 53, y: 56, text: "", text_color: 0xFFFFFF }
+        - label: { id: lbl_date_1, x: 60, y: 56, text: "", text_color: 0xFFFFFF }
         - label: { id: lbl_weather_plzenka, x: 134, y: 56, text: "--", text_color: 0xFFFFFF }
         - label: { id: lbl_temp_plzenka, x: 162, y: 56, text: "--", text_color: 0xFFFFFF }
