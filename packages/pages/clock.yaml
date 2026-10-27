@@ -61,7 +61,7 @@ time:
 
     # update both every minute on the minute
     on_time:
-      - seconds: "0"
+      - seconds: *
         then:
           - lvgl.label.update:
               id: lbl_time
