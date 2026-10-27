@@ -185,7 +185,7 @@ lvgl:
             id: lbl_title_plzenka
             x: 1
             y: 0
-            text: "\"U000F0335\" \"U000F0336\""
+            text: "\U000F0BF0"
             text_font: mdi_8
             text_color: 0xFFFFFF
         - line:
