@@ -42,7 +42,7 @@ microphone:
 
 lvgl_canvas_fx:
   - id: cfx_as
-    effect: audio_spectrum
+    effect: lava_lamp
     canvas: fx_as_canvas
     fps: 30
     start_paused: true
