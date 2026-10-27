@@ -14,7 +14,7 @@ lvgl_page_manager:
       friendly_name: "${page_friendly_name}"
 
 external_components:
-  - source: github://pavlov-net/lvgl-canvas-fx@main
+  - source: github://ada-88/lvgl-canvas-fx@main
     refresh: always
     components: [lvgl_canvas_fx]
 
