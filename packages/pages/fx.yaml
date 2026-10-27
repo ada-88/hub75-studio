@@ -45,7 +45,6 @@ select:
       - lightning
       - lava_lamp
       - rain
-      - audio_spectrum
     initial_option: fireworks
     set_action:
       - lvgl_canvas_fx.set_effect:
