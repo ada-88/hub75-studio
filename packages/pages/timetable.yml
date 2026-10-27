@@ -152,22 +152,22 @@ time:
         - lvgl.label.update:
             id: lbl_date_1
             text:
-              time_format: "%a %d.%m.%Y"
+              time_format: "%d.%m.%Y"
               time: ha_time
 
     # update both every minute on the minute
     on_time:
-      - seconds: 60
+      - seconds: "0"
         then:
           - lvgl.label.update:
               id: lbl_time_1
               text:
-                time_format: "%H:%M"
+                time_format: "%H:%M:%S"
                 time: ha_time
           - lvgl.label.update:
               id: lbl_date_1
               text:
-                time_format: "%a%d.%m.%y"
+                time_format: "%d.%m.%y"
                 time: ha_time
 
 lvgl_page_manager:
@@ -219,7 +219,7 @@ lvgl:
             line_color: 0xFFFFFF
             line_width: 1
         - line:
-            points: [ [125, 53], [119, 64] ]
+            points: [ [125, 53], [125, 64] ]
             line_color: 0xFFFFFF
             line_width: 1
 

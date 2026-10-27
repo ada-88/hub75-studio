@@ -51,7 +51,7 @@ time:
         - lvgl.label.update:
             id: lbl_time
             text:
-              time_format: "%I:%M %p"
+              time_format: "%H:%M:%S"
               time: ha_time
         - lvgl.label.update:
             id: lbl_date
@@ -61,13 +61,12 @@ time:
 
     # update both every minute on the minute
     on_time:
-      - seconds: 0
-        minutes: /1
+      - seconds: "0"
         then:
           - lvgl.label.update:
               id: lbl_time
               text:
-                time_format: "%I:%M %p"
+                time_format: "%H:%M:%S"
                 time: ha_time
           - lvgl.label.update:
               id: lbl_date
