@@ -4,10 +4,9 @@ font:
     size: 8
     bpp: 4
     glyphs: [
-      "\U000F0BF0", # mdi-b-circle
-      "\U000F0BED", # mdi-a-circle
+      "\U000F0BED", # mdi-lightbulb
+      "\U000F0BF0", # mdi-lightbulb-outline
       ]
-
 
 text_sensor:
   # --- Plzeňka ---
@@ -18,6 +17,7 @@ text_sensor:
       then:
         - lvgl.label.update:
             id: lbl_title_plzenka
+            font: 
             text: !lambda 'return x;'
 
   - platform: homeassistant
@@ -168,7 +168,7 @@ time:
           - lvgl.label.update:
               id: lbl_date_1
               text:
-                time_format: "%a %d.%m.%y"
+                time_format: "%a%d.%m.%y"
                 time: ha_time
 
 lvgl_page_manager:
@@ -184,6 +184,12 @@ lvgl:
         - label:
             id: lbl_title_plzenka
             x: 1
+            y: 0
+            text: ""
+            text_color: 0xFFFFFF
+        - label:
+            id: lbl_title_tram_stop
+            x: 50
             y: 0
             text: "\U000F0BF0"
             text_font: mdi_8
@@ -219,6 +225,6 @@ lvgl:
             line_width: 1
 
         - label: { id: lbl_time_1, x: 1, y: 56, text: "", text_color: 0xFFFFFF }
-        - label: { id: lbl_date_1, x: 48, y: 56, text: "", text_color: 0xFFFFFF }
+        - label: { id: lbl_date_1, x: 47, y: 56, text: "", text_color: 0xFFFFFF }
         - label: { id: lbl_weather_plzenka, x: 128, y: 56, text: "--", text_color: 0xFFFFFF }
         - label: { id: lbl_temp_plzenka, x: 162, y: 56, text: "--", text_color: 0xFFFFFF }
