@@ -15,7 +15,7 @@ lvgl_page_manager:
 
 external_components:
   - source: github://pavlov-net/lvgl-canvas-fx@main
-    refresh: 0s
+    refresh: always
     components: [lvgl_canvas_fx]
 
 select:
