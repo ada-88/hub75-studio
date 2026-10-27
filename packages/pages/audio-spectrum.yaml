@@ -14,7 +14,8 @@ lvgl_page_manager:
       friendly_name: "${page_friendly_name}"
 
 external_components:
-  - source: github://pavlov-net/lvgl-canvas-fx@v0.4.1
+  - source: github://pavlov-net/lvgl-canvas-fx@main
+    refresh: always
 
 # ---- Microphone Configuration ----
 # Hardware: I²S digital microphone

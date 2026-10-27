@@ -157,12 +157,12 @@ time:
 
     # update both every minute on the minute
     on_time:
-      - seconds: '*'
+      - seconds: 60
         then:
           - lvgl.label.update:
               id: lbl_time_1
               text:
-                time_format: "%H:%M:%S"
+                time_format: "%H:%M"
                 time: ha_time
           - lvgl.label.update:
               id: lbl_date_1
@@ -219,11 +219,11 @@ lvgl:
             line_color: 0xFFFFFF
             line_width: 1
         - line:
-            points: [ [119, 53], [119, 64] ]
+            points: [ [125, 53], [119, 64] ]
             line_color: 0xFFFFFF
             line_width: 1
 
         - label: { id: lbl_time_1, x: 1, y: 56, text: "", text_color: 0xFFFFFF }
-        - label: { id: lbl_date_1, x: 51, y: 56, text: "", text_color: 0xFFFFFF }
-        - label: { id: lbl_weather_plzenka, x: 128, y: 56, text: "--", text_color: 0xFFFFFF }
+        - label: { id: lbl_date_1, x: 53, y: 56, text: "", text_color: 0xFFFFFF }
+        - label: { id: lbl_weather_plzenka, x: 134, y: 56, text: "--", text_color: 0xFFFFFF }
         - label: { id: lbl_temp_plzenka, x: 162, y: 56, text: "--", text_color: 0xFFFFFF }
