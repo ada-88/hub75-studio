@@ -34,7 +34,7 @@ external_components:
 # - sample_rate: 16000 (must match EqFftRenderer::setup fs)
 # - With fs=16 kHz and fmax_frac≈0.46–0.47, bars top out near 7.5–8 kHz
 microphone:
-  - id: !extend m1_mic
+  - id: !extend ws_mic
     on_data:
       then:
         - lambda: |-
@@ -59,9 +59,9 @@ lvgl:
         then:
           - lvgl_canvas_fx.resume:
               id: cfx_as
-          - microphone.capture: m1_mic
+          - microphone.capture: ws_mic
       on_unload:
         then:
           - lvgl_canvas_fx.pause:
               id: cfx_as
-          - microphone.stop_capture: m1_mic
+          - microphone.stop_capture: ws_mic
