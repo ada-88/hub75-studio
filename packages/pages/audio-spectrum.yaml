@@ -14,7 +14,8 @@ lvgl_page_manager:
       friendly_name: "${page_friendly_name}"
 
 external_components:
-  - source: github://pavlov-net/lvgl-canvas-fx@v0.4.1
+  - source: github://pavlov-net/lvgl-canvas-fx@main
+    components: [lvgl_canvas_fx]
 
 # ---- Microphone Configuration ----
 # Hardware: I²S digital microphone
@@ -75,16 +76,16 @@ select:
 lvgl_canvas_fx:
   - id: cfx
     effect: fireworks
-    canvas: fx_as_canvas
+    canvas: fx_canvas
     fps: 30
     start_paused: true
 
 lvgl:
   pages:
-    - id: fx_as_page
+    - id: fx_page
       widgets:
         - canvas:
-            id: fx_as_canvas
+            id: fx_canvas
             width: ${DISPLAY_W}
             height: ${DISPLAY_H}
       on_load:
