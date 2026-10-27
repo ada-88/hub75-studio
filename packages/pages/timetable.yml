@@ -1,7 +1,7 @@
 font:
   - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/refs/heads/master/fonts/materialdesignicons-webfont.ttf"
     id: mdi_8
-    size: 9
+    size: 10
     bpp: 1
     glyphs: [
       "\U000F0BED", # mdi-lightbulb

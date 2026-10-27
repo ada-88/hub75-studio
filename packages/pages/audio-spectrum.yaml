@@ -39,6 +39,38 @@ microphone:
       then:
         - lambda: |-
             id(cfx_as).submit_data(x.data(), x.size());
+select:
+  - platform: template
+    id: fx_effect_select
+    name: "FX Effect"
+    optimistic: true
+    options:
+      - circle
+      - fireworks
+      - fireplace
+      - aurora
+      - plasma
+      - breathing
+      - clouds
+      - sunset
+      - starfield
+      - snowfall
+      - leaves
+      - sakura
+      - fireflies
+      - warp
+      - boids
+      - ripples
+      - matrix
+      - sand
+      - lightning
+      - lava_lamp
+      - rain
+    initial_option: fireworks
+    set_action:
+      - lvgl_canvas_fx.set_effect:
+          id: cfx
+          effect: !lambda 'return x;'
 
 lvgl_canvas_fx:
   - id: cfx_as
