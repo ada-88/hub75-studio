@@ -15,7 +15,7 @@ lvgl_page_manager:
 
 external_components:
   - source: github://pavlov-net/lvgl-canvas-fx@main
-    components: [lvgl_canvas_fx, register_builtin_effects]
+    components: [lvgl_canvas_fx, fx_lava_lamp]
 
 select:
   - platform: template
