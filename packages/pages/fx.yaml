@@ -15,6 +15,7 @@ lvgl_page_manager:
 
 external_components:
   - source: github://pavlov-net/lvgl-canvas-fx@main
+    components: [lvgl_canvas_fx]
 
 select:
   - platform: template
@@ -53,7 +54,7 @@ lvgl_canvas_fx:
   - id: cfx
     effect: fireworks  # or circle or fireplace
     canvas: fx_canvas
-    fps: 30
+    fps: 24
     start_paused: true
 
 lvgl:
