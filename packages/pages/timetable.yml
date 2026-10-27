@@ -1,8 +1,8 @@
 font:
   - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/refs/heads/master/fonts/materialdesignicons-webfont.ttf"
     id: mdi_8
-    size: 8
-    bpp: 4
+    size: 12
+    bpp: 1
     glyphs: [
       "\U000F0BED", # mdi-lightbulb
       "\U000F0BF0", # mdi-lightbulb-outline
@@ -183,13 +183,13 @@ lvgl:
         - label:
             id: lbl_title_plzenka
             x: 1
-            y: 0
+            y: 1
             text: ""
             text_color: 0xFFFFFF
         - label:
             id: lbl_title_tram_stop
             x: 50
-            y: 0
+            y: 1
             text: "\U000F0BF0"
             text_font: mdi_8
             text_color: 0xFFFFFF
@@ -224,6 +224,6 @@ lvgl:
             line_width: 1
 
         - label: { id: lbl_time_1, x: 1, y: 56, text: "", text_color: 0xFFFFFF }
-        - label: { id: lbl_date_1, x: 47, y: 56, text: "", text_color: 0xFFFFFF }
+        - label: { id: lbl_date_1, x: 51, y: 56, text: "", text_color: 0xFFFFFF }
         - label: { id: lbl_weather_plzenka, x: 128, y: 56, text: "--", text_color: 0xFFFFFF }
         - label: { id: lbl_temp_plzenka, x: 162, y: 56, text: "--", text_color: 0xFFFFFF }
