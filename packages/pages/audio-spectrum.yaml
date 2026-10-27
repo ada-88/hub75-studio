@@ -38,7 +38,7 @@ microphone:
     on_data:
       then:
         - lambda: |-
-            id(cfx_as).submit_data(x.data(), x.size());
+            id(cfx).submit_data(x.data(), x.size());
 select:
   - platform: template
     id: fx_effect_select
@@ -73,8 +73,8 @@ select:
           effect: !lambda 'return x;'
 
 lvgl_canvas_fx:
-  - id: cfx_as
-    effect: lava_lamp
+  - id: cfx
+    effect: fireworks
     canvas: fx_as_canvas
     fps: 30
     start_paused: true
@@ -90,10 +90,10 @@ lvgl:
       on_load:
         then:
           - lvgl_canvas_fx.resume:
-              id: cfx_as
+              id: cfx
           - microphone.capture: ws_mic
       on_unload:
         then:
           - lvgl_canvas_fx.pause:
-              id: cfx_as
+              id: cfx
           - microphone.stop_capture: ws_mic
