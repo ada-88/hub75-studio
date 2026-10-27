@@ -14,7 +14,7 @@ lvgl_page_manager:
       friendly_name: "${page_friendly_name}"
 
 external_components:
-  - source: github://pavlov-net/lvgl-canvas-fx@v0.4.1
+  - source: github://pavlov-net/lvgl-canvas-fx@main
 
 select:
   - platform: template
@@ -26,6 +26,23 @@ select:
       - fireworks
       - fireplace
       - aurora
+      - plasma
+      - breathing
+      - clouds
+      - sunset
+      - starfield
+      - snowfall
+      - leaves
+      - sakura
+      - fireflies
+      - warp
+      - boids
+      - ripples
+      - matrix
+      - sand
+      - lightning
+      - lava_lamp
+      - rain
     initial_option: fireworks
     set_action:
       - lvgl_canvas_fx.set_effect:

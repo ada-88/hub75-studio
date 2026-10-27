@@ -14,8 +14,7 @@ lvgl_page_manager:
       friendly_name: "${page_friendly_name}"
 
 external_components:
-  - source: github://pavlov-net/lvgl-canvas-fx@main
-    components: [lvgl_canvas_fx]
+  - source: github://pavlov-net/lvgl-canvas-fx@v0.4.1
 
 # ---- Microphone Configuration ----
 # Hardware: I²S digital microphone
@@ -35,66 +34,34 @@ external_components:
 # - sample_rate: 16000 (must match EqFftRenderer::setup fs)
 # - With fs=16 kHz and fmax_frac≈0.46–0.47, bars top out near 7.5–8 kHz
 microphone:
-  - id: !extend ws_mic
+  - id: !extend m1_mic
     on_data:
       then:
         - lambda: |-
-            id(cfx).submit_data(x.data(), x.size());
-select:
-  - platform: template
-    id: fx_effect_select
-    name: "FX Effect"
-    optimistic: true
-    options:
-      - circle
-      - fireworks
-      - fireplace
-      - aurora
-      - plasma
-      - breathing
-      - clouds
-      - sunset
-      - starfield
-      - snowfall
-      - leaves
-      - sakura
-      - fireflies
-      - warp
-      - boids
-      - ripples
-      - matrix
-      - sand
-      - lightning
-      - lava_lamp
-      - rain
-    initial_option: fireworks
-    set_action:
-      - lvgl_canvas_fx.set_effect:
-          id: cfx
-          effect: !lambda 'return x;'
+            id(cfx_as).submit_data(x.data(), x.size());
 
 lvgl_canvas_fx:
-  - id: cfx
-    effect: fireworks
-    canvas: fx_canvas
+  - id: cfx_as
+    effect: audio_spectrum
+    canvas: fx_as_canvas
     fps: 30
     start_paused: true
 
 lvgl:
   pages:
-    - id: fx_page
+    - id: fx_as_page
       widgets:
         - canvas:
-            id: fx_canvas
+            id: fx_as_canvas
             width: ${DISPLAY_W}
             height: ${DISPLAY_H}
       on_load:
         then:
           - lvgl_canvas_fx.resume:
-              id: cfx
-          - microphone.capture: ws_mic
+              id: cfx_as
+          - microphone.capture: m1_mic
       on_unload:
         then:
           - lvgl_canvas_fx.pause:
-              id: cfx
-          - microphone.stop_capture: ws_mic
+              id: cfx_as
+          - microphone.stop_capture: m1_mic
